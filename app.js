@@ -34,16 +34,16 @@ const middlewares = jsonServer.defaults();
 
 const PORT = process.env.PORT || 5005;
 
-const CORS = require('cors');
+// const CORS = require('cors');
 
 const FRONTEND_URL = process.env.ORIGIN || "http://localhost:5173";
 
 // controls a very specific header to pass headers from the frontend
-  server.use(
-    CORS({
-      origin: [FRONTEND_URL]
-    })
-  );
+  // server.use(
+  //   CORS({
+  //     origin: [FRONTEND_URL]
+  //   })
+  // );
 server.use(middlewares);
 
 server.use(morgan('dev'));
